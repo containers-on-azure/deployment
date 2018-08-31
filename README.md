@@ -1,2 +1,7 @@
-# deployment
-Deployment Repository for DevOps team
+# Deployment
+
+Central repository for DevOps team in production system
+
+It contains the deployment for the FrontEnd microservices
+
+- [Version 01](./frontend/version01)

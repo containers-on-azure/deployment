@@ -1,0 +1,21 @@
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+kind: Deployment
+metadata:
+  name: frontend-production-api
+  namespace: production
+  environment: production
+spec:
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+        component: frontend-api
+    spec:
+      containers:
+      - name: frontend-api
+        image: fbeltrao.azurecr.io/frontendapi:41
+        ports:
+        - containerPort: 80

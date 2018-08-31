@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-web
+  namespace: production
+  environment: production
+  labels:
+    app: frontend
+    component: frontend-api
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    protocol: TCP
+  selector:
+    component: frontend-api
+    environment: production
