@@ -3,7 +3,6 @@ kind: Deployment
 metadata:
   name: frontend-production-api
   namespace: production
-  environment: production
 spec:
   selector:
     matchLabels:
@@ -13,6 +12,7 @@ spec:
       labels:
         app: frontend
         component: frontend-api
+        environment: production
     spec:
       containers:
       - name: frontend-api

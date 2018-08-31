@@ -2,11 +2,11 @@ apiVersion: v1
 kind: Service
 metadata:
   name: frontend-web
-  namespace: production
-  environment: production
+  namespace: production  
   labels:
     app: frontend
     component: frontend-web
+    environment: production
 spec:
   type: LoadBalancer
   ports:
