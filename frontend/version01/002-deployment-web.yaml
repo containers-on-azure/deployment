@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: frontend-api
-        image: #{DOCKER_REGISTRY}#/frontendweb:#{Build.BuildId}#
+        image: fbeltrao.azurecr.io/frontendweb:51
         ports:
         - containerPort: 80
